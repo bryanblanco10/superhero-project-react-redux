@@ -6,15 +6,15 @@ import BioImage from "./components/BioImage";
 import Spinner from "../../components/Spinner";
 import Header from "../../components/Header";
 import { searchBio } from "../../redux/actions/superHero";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { biographySel, isLoadingSel, errorSel } from "../../redux/selector";
 
 export default function Biography() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const biography = useSelector(biographySel);
-  const isLoading = useSelector(isLoadingSel);
-  const error = useSelector(errorSel);
+  const biography = useSelector(biographySel, shallowEqual);
+  const isLoading = useSelector(isLoadingSel, shallowEqual);
+  const error = useSelector(errorSel, shallowEqual);
 
   useEffect(() => {
     if (id) dispatch(searchBio(id));
