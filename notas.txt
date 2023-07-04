@@ -1,0 +1,9 @@
+Cuando lo usuaría
+
+-Proyectos con gran cantidad de información
+-Cualquier Proyectos
+
+Cuando no lo usuaria
+-Proyectos de muy poca informacion (Escolares o demostrativos)
+-Cuando quiera un patron de diseños de container.
+-Sea solo un proyecto de formularios
